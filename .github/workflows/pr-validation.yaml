@@ -44,4 +44,4 @@ jobs:
         run: npm install parcel
 
       - name: Build Static Website
-        run: npx parcel build src/home.html --dist-dir dist --public-url ./
+        run: npx parcel build src/home.js --dist-dir dist --public-url ./
