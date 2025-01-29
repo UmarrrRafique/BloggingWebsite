@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Build static website
-        run: npx parcel build src/home.js --dist-dir dist --public-url ./
+        run: npx parcel build src/home.html --dist-dir dist --public-url ./
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
