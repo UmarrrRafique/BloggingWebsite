@@ -2,8 +2,8 @@ body {
     font-family: sans-serif;
     margin: 0;
     line-height: 1.6;
-    background-color: rgb(244 244 244); /* Light background (no alpha needed) */
-    color: #333; /* Dark text for contrast */
+    background-color: rgb(244, 244, 244); 
+    color: #333; 
 }
 
 header {
@@ -28,16 +28,16 @@ nav a {
 
 main {
     padding: 2rem;
-    max-width: 800px; /* Limit content width */
-    margin: 0 auto; /* Center the content */
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 .post {
     background-color: white;
     padding: 1rem;
     margin-bottom: 2rem;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0 / 10%); 
 }
 
 .post h2 {
@@ -59,7 +59,7 @@ main {
 
 .read-more {
     display: inline-block;
-    background-color: #007bff; /* Blue button */
+    background-color: #007bff; 
     color: white;
     padding: 0.5rem 1rem;
     text-decoration: none;
