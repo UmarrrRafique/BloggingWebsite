@@ -1,0 +1,47 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  lint:
+    name: Lint HTML and CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install Linting Tools
+        run: |
+          npm install htmlhint stylelint stylelint-config-standard
+
+      - name: Lint HTML
+        run: npx htmlhint "src/**/*.html"
+
+      - name: Lint CSS
+        run: npx stylelint "styles/**/*.css"
+
+  build:
+    name: Build Static Website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install Parcel
+        run: npm install parcel
+
+      - name: Build Static Website
+        run: npx parcel build src/home.html --dist-dir dist --public-url ./
